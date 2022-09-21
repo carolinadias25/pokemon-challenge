@@ -16,20 +16,22 @@ We'd like you to build an application that displays the first 151 Pokémon. Idea
 - You will need to use git for this challenge.
 - Please commit only once for each step in the instructions.
 - Do not bundle multiple steps in each commit.
-- Please name each commit with the name of the appropriate stage, ie "Stage 1".
-- To start the dev server, run `npm run dev` and it will fire up at `localhost:3000`
+- Please name each commit with the name of the appropriate stage, ie "Step 1".
 
 ## Instructions
 
-### Stage 1
+### Preparing
+Clone this repo down to your local machine and run `npm install` to install the project dependencies. To start the dev server, run `npm run dev` and it will fire up at `localhost:3000`
+
+### Step 1
 Grab the API and fetch the first 151 pokemon and store it in the application state ready to be used.
 
-### Stage 2
+### Step 2
 Create a front-end to display all Pokémon on the webpage. You are free to use any layout you like.
 
 You'll notice that the API doesn't return an image for each Pokémon. Make sure you use the relevant image for each Pokémon from the `/public/sprites` directory.
 
-### Stage 3
+### Step 3
 Add some interactivity. Clicking on a Pokémon should show some more information about the selected Pokémon. You can display this however you like (modal, tab, etc).
 
 ## Submitting your work
