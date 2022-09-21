@@ -24,7 +24,7 @@ We'd like you to build an application that displays the first 151 Pokémon. Idea
 Clone this repo down to your local machine and run `npm install` to install the project dependencies. To start the dev server, run `npm run dev` and it will fire up at `localhost:3000`
 
 ### Step 1
-Grab the API and fetch the first 151 pokemon and store it in the application state ready to be used.
+Fetch the first 151 pokemon from https://pokeapi.co/ and store it in the application state ready to be used.
 
 ### Step 2
 Create a front-end to display all Pokémon on the webpage. You are free to use any layout you like.
