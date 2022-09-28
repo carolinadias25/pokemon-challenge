@@ -1,8 +1,6 @@
-import React from 'react';
-import Main from '/src/Components/Main';
-
+import '../src/styles.css'
 function MyApp({ Component, pageProps }) {
-  return <Main />
+    return <Component {...pageProps} />
 }
 
 export default MyApp

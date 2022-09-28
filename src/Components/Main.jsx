@@ -1,26 +1,41 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import Card from './Card'
 
 
-const Main =()=>{
-    const [pokeData, setPokeData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [url, setUrl] = useState('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0');
+function Main() {
+    const [pokeData,setPokeData]=useState([]);
+    const [loading,setLoading]=useState(true);
+    const [url,setUrl]=useState("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
 
-    const pokemonFunction=async()=>{
+    const getAllPokemons = async () => {
         setLoading(true)
         const res = await axios.get(url);
-        // console.log(res.data)
+        getPokemonObject(res.data.results)
         setLoading(false)
     }
+    const getPokemonObject = async (res) => {
+        res.map(async(item)=>{
+            const result = await axios.get(`https://pokeapi.co/api/v2/pokemon/${item.name}`)
+            setPokeData(state => {
+                state = [...state, result.data]
+                state.sort((a,b)=>a.id>b.id?1:-1)
+                return state
+            })
+        })
+    }
     useEffect(() => {
-        pokemonFunction()
+        getAllPokemons()
     },[url])
     return (
         <>
-            <div>
-                It renders!
+        <div className="container">
+            <div className="pokemon-container">
+                <div className="all-container">
+                <Card pokemon={pokeData} loading={loading}/>
+                </div>
             </div>
+        </div>
         </>
     )
 }
