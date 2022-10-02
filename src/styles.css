@@ -1,4 +1,4 @@
-.app-contaner {
+.pokemon-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,17 +46,60 @@ h3 {
 .card-container small {
     text-transform: capitalize;
 }
-.detail-wrapper {
+.details-wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-.detail-wrapper button {
-    color: rgb(22, 22, 22);
-    padding: .5rem;
-    margin-top: 1rem;
-    border: none;
-    border-radius: 0.2rem;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.185);
+.details-wrapper h2{
+    font-size: 15px !important;
+    margin-top: 2rem;
+}
+
+.modal-body{
+    padding: 1rem !important;
+}
+.title {
+    font-size: 30px !important;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.modal-container{
+    display: flex;
+    justify-content: center;
+}
+.abilities{
+    align-items: center;
+    display: flex;
+}
+.abilities .group{
+    border-radius: 8px;
+}
+.types{
+    display: flex;
+}
+.image img {
+    width: 160px;
+    height: 160px;
+}
+.left-side{
+    margin-left: 8%;
+}
+h2{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.info {
+    font-size: 20px;
+    font-weight: bold;
+}
+@media all and (min-width:320px) and (max-width: 520px) {
+    .modal-container{
+        display: flex;
+        justify-content: center;
+    }
+    .left-side {
+        margin-left: 0%;
+    }
 }

@@ -2,11 +2,11 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Card from './Card'
 
-
 function Main() {
-    const [pokeData,setPokeData]=useState([]);
-    const [loading,setLoading]=useState(true);
-    const [url,setUrl]=useState("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
+    const [pokeData,setPokeData]= useState([]);
+    const [loading,setLoading]= useState(true);
+    const [url,setUrl]= useState("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0");
+    const [pokemonInfo, setPokemonInfo] = useState();
 
     const getAllPokemons = async () => {
         setLoading(true)
@@ -32,7 +32,7 @@ function Main() {
         <div className="container">
             <div className="pokemon-container">
                 <div className="all-container">
-                <Card pokemon={pokeData} loading={loading}/>
+                <Card pokemon={pokeData} loading={loading} infoPokemon={pokemon => setPokemonInfo(pokemon)}/>
                 </div>
             </div>
         </div>
